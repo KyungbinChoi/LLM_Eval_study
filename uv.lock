@@ -37,6 +37,7 @@ dependencies = [
     { name = "langchain-community" },
     { name = "langchain-experimental" },
     { name = "langchain-google-community" },
+    { name = "langchain-google-genai" },
     { name = "langchain-tavily" },
     { name = "matplotlib" },
     { name = "nest-asyncio" },
@@ -59,6 +60,7 @@ requires-dist = [
     { name = "langchain-community", specifier = ">=0.4.1" },
     { name = "langchain-experimental", specifier = ">=0.4.1" },
     { name = "langchain-google-community", specifier = ">=3.0.5" },
+    { name = "langchain-google-genai", specifier = ">=4.2.3" },
     { name = "langchain-tavily", specifier = ">=0.2.17" },
     { name = "matplotlib", specifier = ">=3.10.8" },
     { name = "nest-asyncio", specifier = ">=1.6.0" },
@@ -1100,6 +1102,11 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/4a/c9/db44165ba7c581268c6d46017ef63339110378305062830104fc7fa144cb/google_auth-2.53.0-py3-none-any.whl", hash = "sha256:6e7449917c599b35126a99ec268ec6880301f2fea41dce198fe8fd83ff642b68", size = 246071, upload-time = "2026-05-15T20:53:05.609Z" },
 ]
 
+[package.optional-dependencies]
+requests = [
+    { name = "requests" },
+]
+
 [[package]]
 name = "google-auth-httplib2"
 version = "0.4.0"
@@ -1153,6 +1160,27 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/79/ee/fd1ff943dd8ac9d95b941df608c5c028604812f32c581a9e6e01bf24d52e/google_cloud_modelarmor-0.6.0.tar.gz", hash = "sha256:c139781669678693ec343fab735fb684cc624cd0b01cc46b49e4ceb61c99c113", size = 163326, upload-time = "2026-05-07T08:04:20.517Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ad/c9/e0823ae436aa3a8d88ec52708d1b2f79fac646c4c3f40e8f807e4afdecbb/google_cloud_modelarmor-0.6.0-py3-none-any.whl", hash = "sha256:a6607caf764ad56a49524f8a0e7cd8fc45031d2b65a879f2739cef8565f0e457", size = 140880, upload-time = "2026-05-07T08:02:53.347Z" },
+]
+
+[[package]]
+name = "google-genai"
+version = "1.75.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "distro" },
+    { name = "google-auth", extra = ["requests"] },
+    { name = "httpx" },
+    { name = "pydantic" },
+    { name = "requests" },
+    { name = "sniffio" },
+    { name = "tenacity" },
+    { name = "typing-extensions" },
+    { name = "websockets" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9d/59/3ed61240ef20b3ae6ed54e82c6f8b6d1f194947bc6679679dd6cdb037594/google_genai-1.75.0.tar.gz", hash = "sha256:56bac3991b311c93f980c0a2abcd287b672146905df1fbd71c92ed633d5a07cf", size = 539039, upload-time = "2026-05-04T22:48:54.857Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2d/b6/552d40e96da22921eb1fead7c14b00b5b5473a20e45959488660fab35ee2/google_genai-1.75.0-py3-none-any.whl", hash = "sha256:8dc4c096e7d6288c3087f6893f582fe52468932464781edb8193bd92b9fefb2c", size = 793726, upload-time = "2026-05-04T22:48:53.033Z" },
 ]
 
 [[package]]
@@ -1906,6 +1934,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/56/d5/14edabd51bddddefdb6466c399544f4427d93eca1223c8b5b43dc0d01b2f/langchain_google_community-4.0.0.tar.gz", hash = "sha256:8851da3dbe3a398c39065ec672eecf1763986122fb7626a625cfe3b54dc0e400", size = 1004858, upload-time = "2026-04-29T21:52:28.999Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/68/42/4228fb6117e2cecd0192e03c834afce7b9fb133db380c590cbe8022ed67c/langchain_google_community-4.0.0-py3-none-any.whl", hash = "sha256:919b12a61341b7401259319b04f0c34aa7175ac4ee5b05cc1bc54eae65710ddb", size = 168481, upload-time = "2026-04-29T21:52:27.389Z" },
+]
+
+[[package]]
+name = "langchain-google-genai"
+version = "4.2.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "filetype" },
+    { name = "google-genai" },
+    { name = "langchain-core" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/85/20/76e3b367d31ee8b8beda715ffdd6a5db12d99700a12936123bd9adaaa00f/langchain_google_genai-4.2.3.tar.gz", hash = "sha256:b36bf2201c7b1f1b5d3e13a122af2f8f829151a15183985dcf24e2bc0fcfe69c", size = 269998, upload-time = "2026-05-21T22:11:34.291Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c4/0f/61f0c667d31bfc80fff5af0985d8d7925a75592283a3d2f4b0abf63614e6/langchain_google_genai-4.2.3-py3-none-any.whl", hash = "sha256:2b1be55443c0f409f52799a95f86011e8fa4d15d50b2ee8db2416096828b7042", size = 68569, upload-time = "2026-05-21T22:11:32.749Z" },
 ]
 
 [[package]]
@@ -2904,7 +2947,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess" },
+    { name = "ptyprocess", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [
