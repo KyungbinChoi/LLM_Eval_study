@@ -17,6 +17,7 @@ dependencies = [
     "langchain-google-community>=3.0.5",
     "langchain-google-genai>=4.2.3",
     "langchain-tavily>=0.2.17",
+    "langchain-text-splitters>=1.1.2",
     "matplotlib>=3.10.8",
     "nest-asyncio>=1.6.0",
     "pq>=1.9.1",
