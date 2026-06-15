@@ -217,7 +217,10 @@ agent = create_agent(
 First use the `check_faq` tool to see if the question is in the FAQ. If it is, use the provided context to answer the question.
 If the question is not in the FAQ, use the `get_document_name` tool to determine which document is most relevant to the question, 
 and then use the `retriever_tool` to retrieve
-Use the tools provided to you to answer the user's question""",
+Use the tools provided to you to answer the user's question
+Please provide a fianl answer to the user's question based on the information you have retrieved from your tool  without adding any extra information.
+Make sure not to mention anything that is not in the retrieved documents or the FAQ context in your final answer.
+""",
 )
 
 # %%
