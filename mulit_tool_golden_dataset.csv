@@ -1,0 +1,9 @@
+question,answer,target_tool_sequence
+"Attention Is All You Need 논문을 arXiv에서 찾아서 요약한 내용을 iris122413@gmail.com으로 바로 보내줘",이메일 전송이 완료되었습니다,"[""arxiv"", ""send_gmail_message""]"
+"피보나치 수열의 20번째 값을 Python으로 계산해줘",코드 실행이 완료되었습니다,"[""python_repl_tool""]"
+"최신 LLM 관련 논문을 arXiv에서 검색해줘",논문 검색이 완료되었습니다,"[""arxiv""]"
+"2024년 AI 트렌드를 웹에서 검색하고 Python으로 주요 키워드 빈도를 분석해줘",분석이 완료되었습니다,"[""tavily_search"", ""python_repl_tool""]"
+"Transformer 아키텍처 관련 논문을 arXiv에서 찾아서 요약을 드래프트로 저장해줘. 받는 사람은 iris122413@gmail.com",드래프트를 생성했습니다,"[""arxiv"", ""create_gmail_draft""]"
+"1부터 100까지의 소수를 Python으로 구하고 결과를 iris122413@gmail.com으로 보내줘",이메일 전송이 완료되었습니다,"[""python_repl_tool"", ""send_gmail_message""]"
+"React 19 새로운 기능에 대해 웹에서 조사해서 드래프트로 저장해줘. 받는 사람은 iris122413@gmail.com",드래프트를 생성했습니다,"[""tavily_search"", ""create_gmail_draft""]"
+"Kubernetes 보안 모범 사례를 검색해서 iris122413@gmail.com으로 보내줘",이메일 전송이 완료되었습니다,"[""tavily_search"", ""send_gmail_message""]"
