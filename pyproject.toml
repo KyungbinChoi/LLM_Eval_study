@@ -19,6 +19,7 @@ dependencies = [
     "langchain-tavily>=0.2.17",
     "langchain-text-splitters>=1.1.2",
     "matplotlib>=3.10.8",
+    "mypy-extensions>=1.1.0",
     "nest-asyncio>=1.6.0",
     "pq>=1.9.1",
     "py-zerox>=0.0.7",
